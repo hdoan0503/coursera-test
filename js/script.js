@@ -72,7 +72,7 @@
 
 
 
-//------------Object-------------------
+//-------------------------------------Object----------------------------------------
 // var company = new Object();
 // company.name = "Facebook";
 // company.ceo = new Object();
@@ -91,7 +91,7 @@
 
 // console.log("stock price is: " + company[stockPropName]);
 
-//-------------------Object Literal--------------
+//--------------------------------------Object Literal---------------------------
 // var facebook = {
 // 	name: "Facebook",
 // 	ceo: {
@@ -102,7 +102,7 @@
 // };
 // console.log(facebook.ceo.firstName);
 
-// //------------------Function-------------------
+// //------------------------------------Function--------------------------------
 // function multiply(x, y) {
 // 	return x * y;
 // }
@@ -193,7 +193,7 @@
 // console.log("after changeObject, orig value:");
 // console.log(value);
 
-//------------ 'this' keywork------------
+//--------------------------------- 'this' keywork-----------------------------
 
 // function test() {
 // 	console.log(this);
@@ -205,7 +205,7 @@
 
 
 
-//------------function constructors-------------
+//-----------------------------function constructors-----------------------------
 // function Circle (radius) {
 // 	this.radius = radius;
 // 	this.getArea =
@@ -213,7 +213,7 @@
 // 			return Math.PI * Math.pow(this.radius, 2);
 // 		};
 // }
-// //----------function constructors with prototype-----------------
+// //------------------------function constructors with prototype--------------------------
 // // function Circle (radius) {
 // // 	this.radius = radius;
 // // }
@@ -229,7 +229,7 @@
 // console.log(myOtherCircle);
 
 
-//------------Object literals and "this"--------------
+//----------------------------Object literals and "this"------------------------------
 // var literalCircle = { // new Object
 // 	radius: 10,
 
@@ -246,3 +246,72 @@
 // 	}
 // };
 // console.log(literalCircle.getArea());
+
+
+// ------------------Arrays-------------------------------
+// var arr = new Array();
+// arr[0] = "Hieu";
+// arr[1] = 2;
+// arr[2] = function (name) {
+// 	console.log("Hello " + name);
+// };
+
+// arr[3] = {course: "HTML, CSS & JS"};
+
+// console.log(arr);
+// arr[2](arr[0]);
+// console.log(arr[3].course);
+
+
+//------------------Short hand array creation--------------
+// var names = ["Hieu", "Ngan", "Thy"];
+// console.log(names);
+// for (var i = 0; i < names.length; i++) {
+// 	console.log("Hello " + names[i]);
+// }
+
+
+//------------------loop through array------------------------
+// var names2 = ["Hieu", "Ngan", "Thy"];
+
+// var myObj = {
+// 	name: "Hieu",
+// 	course: "HTML/CSS/JS",
+// 	platform: "Coursera"
+// };
+// for(var prop in myObj) {
+// 	console.log(prop + ": " + myObj[prop]) ;
+// }
+
+// for(var name in names2) {
+// 	console.log("Hello " + names2[name]);
+// }
+
+
+// names2.greeting = "Hi!";  //.greeting is a property of array it is same at 0 1 2 position
+
+// for (var name in names2) {
+// 	console.log("Hello " + names2[name]);
+// }
+
+
+//-------------------------------------Closures----------------------------------------
+
+// function makeMultiplier (multiplier) {+
+// 	function b() {
+// 		console.log("Multiplier is: " + multiplier);
+// 	}
+
+// 	b();
+// 	return (
+// 			function (x) {
+// 				return multiplier * x;
+// 			}
+// 		);
+// }
+
+// var doubleAll = makeMultiplier(2);
+// console.log(doubleAll(10)); //its own exec env
+
+
+
